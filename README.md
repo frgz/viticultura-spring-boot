@@ -1,4 +1,5 @@
 # viticultura
 Viticultura Web App
 
-https://travis-ci.org/frgz/viticultura.svg?branch=master
+[![Build Status](https://travis-ci.org/frgz/viticultura.svg?branch=master)](https://travis-ci.org/frgz/viticultura)
+
