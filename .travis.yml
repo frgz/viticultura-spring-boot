@@ -15,7 +15,7 @@ cache:
     - $HOME/.m2
 
 before_install:
-  - jdk_switcher user oraclejdk8
+  - jdk_switcher use oraclejdk8
   - java -version
 
 script:
