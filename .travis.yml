@@ -19,5 +19,5 @@ before_install:
   - java -version
 
 script:
-  - ./mvnw clean install
+  - mvn clean package
   - bash <(curl -s https://codecov.io/bash)
