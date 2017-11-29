@@ -7,15 +7,14 @@ import org.springframework.web.servlet.ViewResolver;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
-import org.thymeleaf.templateresolver.TemplateResolver;
 
 @Configuration
 public class ThymeleafConfig {
 
     @Bean
-    public TemplateResolver templateResolver() {
+    public SpringResourceTemplateResolver templateResolver() {
         SpringResourceTemplateResolver templateResover = new SpringResourceTemplateResolver();
-        templateResover.setPrefix("/html/");
+        templateResover.setPrefix("/templates/");
         templateResover.setSuffix(".html");
         templateResover.setTemplateMode("HTML5");
         templateResover.setCharacterEncoding("UTF-8");
