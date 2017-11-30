@@ -2,6 +2,7 @@ os:
   - linux
 
 language: java
+sudo: true
 
 jdk:
   - oraclejdk8
@@ -17,8 +18,9 @@ cache:
 before_install:
   - jdk_switcher use oraclejdk8
   - java -version
-  - chmod +x mvnw
+
+before_script:
+  - chmod a+x ./mvnw
 
 script:
-  - mvn -N io.takari:maven:wrapper
-  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvn clean install
